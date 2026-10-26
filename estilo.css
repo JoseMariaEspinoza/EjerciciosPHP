@@ -1,0 +1,321 @@
+/* ==========================================================================
+   VARIABLES, FUENTES Y CONFIGURACIÓN DE COLOR
+   ========================================================================== */
+:root {
+  --bg-app: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  
+  /* Colores de acento profesionales y llamativos */
+  --primary: #4f46e5;       /* Índigo vibrante */
+  --primary-hover: #4338ca;
+  --accent: #db2777;        /* Rosa elegante para etiquetas de código */
+  --border: #e2e8f0;
+  --code-bg: #f8fafc;
+  
+  /* Tipografías con personalidad */
+  --font-display: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ==========================================================================
+   RESET, CONFIGURACIÓN GLOBAL Y TEXTO SIN ETIQUETA
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background: var(--bg-app);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  /* Estilo base para que el texto sin etiqueta herede propiedades correctas */
+  color: #334155;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el bloque contenedor */
+  align-items: center;     /* Centra horizontalmente el bloque contenedor */
+  padding: 3rem 1.5rem;    /* Margen de seguridad para pantallas móviles */
+  
+  /* Estilo para texto suelto directamente en el body */
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* ==========================================================================
+   EL CONTENEDOR CENTRAL (Engloba todo tu HTML de prueba)
+   ========================================================================== */
+main, .wrapper, body > *:not(script):not(style) {
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 750px;       /* Ancho ideal de lectura profesional */
+  padding: 3.5rem;        /* Margen interno generoso */
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  /* Estilo para texto suelto o sin etiqueta dentro del contenedor */
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* ==========================================================================
+   ESTRUCTURA DE BLOQUES INTERNOS (Header, Nav, Footer)
+   ========================================================================== */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px dashed var(--border);
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: 2.75rem !important;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA Y CONTENIDO DE TEXTO STRUCTURADO
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: #0f172a;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; color: var(--primary); }
+h3 { font-size: 1.4rem; }
+
+p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: #334155;          /* Gris oscuro profesional */
+  line-height: 1.75;       
+  margin-bottom: 1.5rem;   /* Espaciado claro entre párrafos */
+}
+
+/* Destacado sutil para el primer párrafo */
+p:first-of-type {
+  font-size: 1.125rem;
+  color: #0f172a;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
+}
+
+strong, b { color: #0f172a; font-weight: 600; }
+em, i { font-style: italic; }
+small { font-size: 0.85rem; color: var(--text-muted); }
+
+mark {
+  background-color: #fef08a;
+  color: #854d0e;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   LISTAS Y CITAS
+   ========================================================================== */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--code-bg);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+blockquote p {
+  color: #475569;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   TABLAS ESTILIZADAS
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--code-bg);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   FORMULARIOS COMPLETOS
+   ========================================================================== */
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: var(--primary);
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+button, input[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   MULTIMEDIA Y CÓDIGO
+   ========================================================================== */
+code {
+  font-family: var(--font-mono);
+  background-color: #fce7f3; /* Fondo rosa suave */
+  color: var(--accent);       /* Texto rosa vibrante */
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+pre {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+kbd {
+  font-family: var(--font-mono);
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 0 #cbd5e1;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
