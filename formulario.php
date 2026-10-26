@@ -18,7 +18,7 @@
             <OPTION VALUE="azul">Azul</OPTION>
             </SELECT><br>';
         echo 'Idiomas:<br>
-            <SELECT MULTIPLE SIZE="3" NAME="idiomas[ ]">
+            <SELECT MULTIPLE SIZE="3" NAME="idiomas[]">
             <OPTION VALUE="ingles" SELECTED>Inglés</OPTION>
             <OPTION VALUE="frances">Francés</OPTION>
             <OPTION VALUE="aleman">Alemán</OPTION>
