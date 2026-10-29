@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        h1 {
+            color: #0066cc;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            border: 1px dotted #0066cc;
+            padding: 6px;
+            width: 760px;
+        }
+
+        td.etiqueta {
+            font-weight: bold;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos de entrada</h1>
+    <p><b><i>Elementos de tipo INPUT</i></b></p>
+    <p><b>TEXT</b></p>
+    <p>Introduce la cadena a buscar: <input type="text" name="texto" value="valor por defecto"></p>
+    <hr>
+    <p><b>RADIO</b></p>
+    <p>
+        Sexo:
+        <input type="radio" name="sexo" value="mujer">Mujer
+        <input type="radio" name="sexo" value="hombre">Hombre
+    </p>
+    <hr>
+    <p><b>CHECKBOX</b></p>
+    <p>
+        Extras:
+        <input type="checkbox" name="extras" value="garaje">Garaje
+        <input type="checkbox" name="extras" value="piscina">Piscina
+        <input type="checkbox" name="extras" value="jardin">Jardín
+    </p>
+    <hr>
+    <p><b>FILE</b></p>
+    <p>Fichero: <input type="file" name="fichero"></p>
+    <hr>
+    <p><b>HIDDEN</b></p>
+    <input type="hidden" name="oculto">
+    <hr>
+    <p><b>PASSWORD</b></p>
+    <p>Contraseña: <input type="password" name="contrasena"></p>
+    <hr>
+    <p><b>Elemento SELECT</b></p>
+    <p>Color:
+        <select name="color" id="color">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+        </select>
+    </p>
+    <hr>
+</body>
+</html>
