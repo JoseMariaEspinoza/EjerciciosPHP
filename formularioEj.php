@@ -33,7 +33,7 @@
         ?>
         <input type="submit" value="Enviar">
         <INPUT TYPE="button" NAME="actualizar" VALUE="Actualizar datos">
-        <INPUT TYPE=reset NAME="borrar" VALUE="Limpiar datos">
+        <INPUT TYPE="reset" NAME="borrar" VALUE="Limpiar datos">
     </form>
 </body>
 

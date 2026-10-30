@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,44 +28,67 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Elementos de entrada</h1>
     <p><b><i>Elementos de tipo INPUT</i></b></p>
-    <p><b>TEXT</b></p>
-    <p>Introduce la cadena a buscar: <input type="text" name="texto" value="valor por defecto"></p>
-    <hr>
-    <p><b>RADIO</b></p>
-    <p>
-        Sexo:
-        <input type="radio" name="sexo" value="mujer">Mujer
-        <input type="radio" name="sexo" value="hombre">Hombre
-    </p>
-    <hr>
-    <p><b>CHECKBOX</b></p>
-    <p>
-        Extras:
-        <input type="checkbox" name="extras" value="garaje">Garaje
-        <input type="checkbox" name="extras" value="piscina">Piscina
-        <input type="checkbox" name="extras" value="jardin">Jardín
-    </p>
-    <hr>
-    <p><b>FILE</b></p>
-    <p>Fichero: <input type="file" name="fichero"></p>
-    <hr>
-    <p><b>HIDDEN</b></p>
-    <input type="hidden" name="oculto">
-    <hr>
-    <p><b>PASSWORD</b></p>
-    <p>Contraseña: <input type="password" name="contrasena"></p>
-    <hr>
-    <p><b>Elemento SELECT</b></p>
-    <p>Color:
-        <select name="color" id="color">
-            <option value="rojo">Rojo</option>
-            <option value="verde">Verde</option>
-            <option value="azul">Azul</option>
-        </select>
-    </p>
-    <hr>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <p><b>TEXT</b></p>
+        <p>Introduce la cadena a buscar: <input type="text" name="texto" value="valor por defecto"></p>
+        <hr>
+        <p><b>RADIO</b></p>
+        <p>
+            Sexo:
+            <input type="radio" name="sexo" value="mujer" checked>Mujer
+            <input type="radio" name="sexo" value="hombre">Hombre
+        </p>
+        <hr>
+        <p><b>CHECKBOX</b></p>
+        <p>
+            Extras:
+            <input type="checkbox" name="extras" value="garaje" checked>Garaje
+            <input type="checkbox" name="extras" value="piscina">Piscina
+            <input type="checkbox" name="extras" value="jardin">Jardín
+        </p>
+        <hr>
+        <p><b>FILE</b></p>
+        <p>Fichero: <input type="file" name="fichero"></p>
+        <hr>
+        <p><b>HIDDEN</b></p>
+        <input type="hidden" name="oculto">
+        <hr>
+        <p><b>PASSWORD</b></p>
+        <p>Contraseña: <input type="password" name="contrasena"></p>
+        <hr>
+        <p><b>Elemento SELECT</b></p>
+        <p>Color:
+            <select name="color">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </p>
+        <hr>
+        <p><b>SELECT MÚLTIPLE</b></p>
+        <p>
+            Idiomas:
+            <select multiple size="3" name="idiomas">
+                <option value="ingles">Inglés</option>
+                <option value="frances">Francés</option>
+                <option value="aleman">Alemán</option>
+                <option value="espanol">Español</option>
+            </select>
+        </p>
+        <hr>
+        <p><b>Elemento TEXTAREA</b></p>
+        <p>
+            Comentario: <textarea cols="50" rows="4" name="comentario">Este libro me parece ...</textarea>
+        </p>
+        <hr>
+        <input type="submit" value="enviar datos">
+        <input type="reset" value="borrar datos">
+    </form>
+
 </body>
+
 </html>

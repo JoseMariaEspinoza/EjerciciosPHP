@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="recibeYrepinta.php" method="POST" enctype="multipart/form-data">
+        <h1>Formulario</h1>
+        <p>Nombre: <input type="text" name="nombre" required></p>
+        <p>Contraseña: <input type="password" name="clave" required></p>
+        <p>
+            Género: <input type="radio" name="genero" value="M">M
+            <input type="radio" name="genero" value="F">F
+        </p>
+        <p>Fecha de nacimiento: <input type="text" name="fechaNacimiento" required></p> 
+        <p>
+            País: <select multiple size="3" name="pais" required>
+                <option value="Espana">España</option>
+                <option value="Peru">Perú</option>
+                <option value="China">China</option>
+            </select>
+        </p>
+        <p>Acepto Términos y condiciones <input type="checkbox" name="OK" required></p>
+        <p>Comentario: <textarea cols="50" rows="4" name="comentario"></textarea></p>
+        <p>Foto: <input type="file" size="5MB" name="foto"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
